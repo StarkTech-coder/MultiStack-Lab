@@ -68,3 +68,13 @@ print(f"Sir, you will be 100 in {years_to_reach_hundred} years.")
 cpu_usage, ram_usage, temperature = 45, 60, 52
 
 print(f"System Monitor -> CPU: {cpu_usage}%, RAM: {ram_usage}%, TEMP: {temperature}°C")
+
+
+
+celsius_temp = input("Enter temperature in Celsius (Sıcaklığı Celsius olarak girin): ")
+
+celsius_temp_float = float(celsius_temp)  # Convert string to float
+
+fahrenheit_temp = (celsius_temp_float * 1.8) + 32
+
+print(f"EN] Temperature: {fahrenheit_temp:.1f} F | [TR] Sıcaklık: {fahrenheit_temp:.1f} F")
