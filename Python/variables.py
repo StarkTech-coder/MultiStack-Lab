@@ -86,7 +86,7 @@ print(f"EN] Temperature: {fahrenheit_temp:.1f} F | [TR] Sıcaklık: {fahrenheit_
 # ==========================================
 # İpucu: len(degisken) sana o metnin kaç harf olduğunu verir.
 
-#example: Access Code Check and Year Calculation (Örnek: Erişim Kodu Kontrolü ve Yıl Hesaplama)
+# example: Access Code Check and Year Calculation (Örnek: Erişim Kodu Kontrolü ve Yıl Hesaplama)
 
 # 1. Access Code Check (Erişim Kodu Kontrolü)
 access_code = input("Enter the access code (Erişim kodunu girin): ")
@@ -115,3 +115,29 @@ difference = 2026 - current_year
 
 print(f"[EN] Current Year: {current_year}. Years until 2026: {difference}")
 print(f"[TR] Mevcut Yıl: {current_year}. 2026'ya kalan yıl: {difference}")
+
+# ==========================================
+# Day 1 - Finale: Data Precision & Escape Characters
+# (Gün 1 - Final: Veri Hassasiyeti ve Kaçış Karakterleri)
+# ==========================================
+
+# 1. Number Formatting (Sayı Formatlama)
+# Jarvis might calculate complex math, let's round it
+# Jarvis karmaşık matematik yapabilir, hadi onu yuvarlayalım
+pi_value = 3.14159265359
+print(f"[EN] Pi to 2 decimal places: {pi_value:.2f}")
+print(f"[TR] Pi'nin ilk iki basamağı: {pi_value:.2f}")
+# .2f -> float sayının noktadan sonra sadece 2 basamağını gösterir.
+
+# 2. Escape Characters (Kaçış Karakterleri)
+# \n -> New line (Alt satıra geçer)
+# \t -> Tab (Boşluk bırakır)
+jarvis_intro = "Name:\tJarvis\nStatus:\tActive\nMission:\tAssist Berk"
+
+print("--- JARVIS SYSTEM INFO ---")
+print(jarvis_intro)
+
+# 3. String Length (Metin Uzunluğu - Jarvis'in hafıza kontrolü)
+message = "Security Protocol Alpha"
+msg_length = len(message)
+print(f"[EN] Message length: {msg_length} | [TR] Mesaj uzunluğu: {msg_length}")
