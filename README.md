@@ -1,0 +1,1 @@
+A personal development laboratory documenting my daily journey through software engineering. This repository tracks my consistent progress in Python scripting, cross-platform mobile development with Flutter/Dart, and high-performance backend systems using Go. Built to showcase continuous learning and multi-stack technical proficiency.
