@@ -79,3 +79,39 @@ celsius_temp_float = float(celsius_temp)  # Convert string to float
 fahrenheit_temp = (celsius_temp_float * 1.8) + 32
 
 print(f"EN] Temperature: {fahrenheit_temp:.1f} F | [TR] Sıcaklık: {fahrenheit_temp:.1f} F")
+
+# ==========================================
+# Day 1 - Project: Jarvis Security Protocol
+# (Gün 1 - Proje: Jarvis Güvenlik Protokolü)
+# ==========================================
+# İpucu: len(degisken) sana o metnin kaç harf olduğunu verir.
+
+#example: Access Code Check and Year Calculation (Örnek: Erişim Kodu Kontrolü ve Yıl Hesaplama)
+
+# 1. Access Code Check (Erişim Kodu Kontrolü)
+access_code = input("Enter the access code (Erişim kodunu girin): ")
+access_code_clean = access_code.strip()
+
+# Karakter sayısını bir değişkene atayalım ki yönetmesi kolay olsun
+code_length = len(access_code_clean)
+
+# NOT: Henüz 'if' konusunu tam işlemedik ama harika bir giriş yaptın!
+# Mantık: Karakter sayısı (code_length) 8'den büyük mü küçük mü?
+if code_length >= 8:
+    print(
+        f"[EN] Access Granted. Code length: {code_length} | [TR] Erişim izni verildi. Kod uzunluğu: {code_length}"
+    )
+else:
+    print(
+        f"[EN] Access Denied! Code too short ({code_length}/8) | [TR] Erişim Reddedildi! Kod çok kısa."
+    )
+
+# 2. Year Calculation (Yıl Hesaplama)
+which_year_str = input("Which year are we in? (Hangi yıldayız?): ")
+current_year = int(which_year_str)
+
+# 2026 hedef yılından farkı bulalım
+difference = 2026 - current_year
+
+print(f"[EN] Current Year: {current_year}. Years until 2026: {difference}")
+print(f"[TR] Mevcut Yıl: {current_year}. 2026'ya kalan yıl: {difference}")
