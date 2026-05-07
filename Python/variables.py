@@ -70,6 +70,7 @@ cpu_usage, ram_usage, temperature = 45, 60, 52
 print(f"System Monitor -> CPU: {cpu_usage}%, RAM: {ram_usage}%, TEMP: {temperature}°C")
 
 
+# Example: Temperature Conversion (Örnek: Sıcaklık Dönüşümü)
 
 celsius_temp = input("Enter temperature in Celsius (Sıcaklığı Celsius olarak girin): ")
 
