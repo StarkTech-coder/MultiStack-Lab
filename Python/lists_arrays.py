@@ -52,9 +52,13 @@ input_name = input("Enter your name (Adınızı girin): ")
 input_name_clean = input_name.strip()
 
 if input_name_clean in authorized_users:
-    print(f"[EN] Access Granted, {input_name_clean}! | [TR] Erişim izni verildi, {input_name_clean}!")
+    print(
+        f"[EN] Access Granted, {input_name_clean}! | [TR] Erişim izni verildi, {input_name_clean}!"
+    )
 else:
-    print(f"[EN] Access Denied, {input_name_clean}! | [TR] Erişim reddedildi, {input_name_clean}!")
+    print(
+        f"[EN] Access Denied, {input_name_clean}! | [TR] Erişim reddedildi, {input_name_clean}!"
+    )
 
 
 visitor_log = []  # Empty list to store visitor names
@@ -100,11 +104,18 @@ print(f"[EN] Last 3 activities: {last_three}")
 every_other = log_archive[::2]
 print(f"[EN] Every second user: {every_other}")
 
-#Example: Sensor List Management (Örnek: Sensör Listesi Yönetimi)
+# Example: Sensor List Management (Örnek: Sensör Listesi Yönetimi)
 
-all_sensors = ["Cam1", "Cam2", "Mic1", "Mic2", "Temp1", "Temp2"] # Jarvis'in tüm sensörleri
+all_sensors = [
+    "Cam1",
+    "Cam2",
+    "Mic1",
+    "Mic2",
+    "Temp1",
+    "Temp2",
+]  # Jarvis'in tüm sensörleri
 
-special_cams = all_sensors[:2] 
+special_cams = all_sensors[:2]
 
 print(f"Special Cameras (Özel Kamera): {special_cams}")
 
@@ -115,5 +126,3 @@ print(f"Special Sensors (Özel Sensörler): {special_sensors}")
 reversed_list = all_sensors[::-1]
 
 print(f"Reversed Sensor List (Ters Sensör Listesi): {reversed_list}")
-
-
