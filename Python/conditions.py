@@ -152,5 +152,3 @@ for floor_index, floor in enumerate(security_grid):
 # Tek Satır (Pro): Sadece 3. katın (indeks 2) verilerini alıp, hepsini string'e çevir
 third_floor_sensors = [str(sensor) for sensor in security_grid[2]]
 print(third_floor_sensors)
-
-
