@@ -69,7 +69,7 @@ import time  # Zaman işlemleri için
 print("System initializing in:")
 for i in range(5, 0, -1):  # 5'ten başla, 0'a kadar git, -1'er azalt
     print(f"{i}...")
-    time.sleep(1) # Gerçekçi olması için 1 saniye bekletilebilir
+    time.sleep(1)  # Gerçekçi olması için 1 saniye bekletilebilir
 print("JARVIS IS NOW FULLY FUNCTIONAL!")
 
 # EXAMPLE: Inventory Check (ÖRNEK: Envanter Kontrolü)
@@ -81,3 +81,55 @@ for item in inventory:
         print(f"Special Upgrade Found: {item}!")
     else:
         print(f"Standard Item: {item}.")
+
+# Do-While Simülasyonu
+
+# Kullanıcı doğru şifreyi girene kadar en az bir kez sorar
+while True:
+    secret = input("Security Code: ")
+    if secret == "1234":
+        break  # Şart sağlandığı an döngüden çıkar
+
+# Nested Loops (İç içe döngüler - Çok boyutlu tarama)
+layers = ["Layer 1", "Layer 2"]
+sensors = ["Temp", "Pressure"]
+
+for l in layers:
+    for s in sensors:
+        print(f"Scanning {l} - {s}")  # Her katman için tüm sensörleri tek tek gezer
+
+# List Comprehension
+names = ["tony", "pepper", "bruce"]
+clean_names = []
+for n in names:
+    clean_names.append(n.capitalize())
+
+# Aynı işlemi tek satırda yapabiliriz:
+clean_names = [n.capitalize() for n in names]
+print(clean_names)  # ['Tony', 'Pepper', 'Bruce']
+
+regions = ["North", "South", "East"]
+frequencies = ["Low-Range", "High-Range"]
+
+# İç içe döngülerle bölge ve frekans taraması
+
+for r in regions:  # DIŞ DÖNGÜ: Önce bir bölgeyi seçer
+    print(f"--- Sector {r} Scanning ---")
+    for (
+        f
+    ) in frequencies:  # İÇ DÖNGÜ: Seçilen bölge içindeki tüm frekansları tek tek gezer
+        print(f"Checking {f} in {r}...")
+
+# List Comprehension ile aynı işlemi yapalım:
+raw_sensors = ["cam_01", "mic_02", "temp_03"]
+
+new_list_raw_sensors = [n.capitalize() for n in raw_sensors]
+
+# İç içe döngülerle çok boyutlu tarama
+sectors = [1, 2]
+checks = ["HardDrive", "Memory"]
+
+for s in sectors:
+    print(f"Scanning Sector {s}...")
+    for c in checks:
+        print(f"Checking {c} in Sector {s}...")
