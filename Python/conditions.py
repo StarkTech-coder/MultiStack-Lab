@@ -133,3 +133,24 @@ for s in sectors:
     print(f"Scanning Sector {s}...")
     for c in checks:
         print(f"Checking {c} in Sector {s}...")
+
+
+# 3 Katmanlı bir bina, her katmanda 4 sensörün durumu
+security_grid = [
+    [1, 1, 0, 1],  # Kat 1
+    [1, 0, 1, 1],  # Kat 2
+    [1, 1, 1, 1],  # Kat 3
+]  # Ensure this list of lists is properly defined and not empty
+
+
+# İç İçe Döngü: security_grid içindeki her katı ve o kattaki her sensörü tek tek gez
+for floor_index, floor in enumerate(security_grid):
+    for sensor_index, sensor in enumerate(floor):
+        if sensor == 0:
+            print(f"HATA: Kat {floor_index + 1}, Sensör {sensor_index + 1} çalışmıyor!")
+
+# Tek Satır (Pro): Sadece 3. katın (indeks 2) verilerini alıp, hepsini string'e çevir
+third_floor_sensors = [str(sensor) for sensor in security_grid[2]]
+print(third_floor_sensors)
+
+
