@@ -55,6 +55,7 @@ for usage in usage_list:
 
 # (Kullanılan {usage} biriminden sonra kalan güç: %{current_power})
 
+
 def scan_area(sector, energy_cost=5):  # energy_cost yazılmazsa hep 5 olur
     print(f"{sector} taranıyor. Harcanan: {energy_cost}")
 
@@ -64,6 +65,7 @@ scan_area("Garaj", 20)  # 20 harcar
 
 # Example: Repairing Parts (Örnek: Parçaları Tamir Etme)
 
+
 def repair_parts(*parts):  # Yıldız işareti 'ne gelirse paketle' demek
     for part in parts:
         print(f"{part} tamir edildi.")
@@ -72,6 +74,7 @@ def repair_parts(*parts):  # Yıldız işareti 'ne gelirse paketle' demek
 repair_parts("Helmet", "Glove", "Boots")  # İstediğin kadar yazabilirsin!
 
 # Example: Nested Functions (Örnek: İç İçe Fonksiyonlar)
+
 
 def prepare_suit():
     # İç fonksiyon (Yardımcı)
@@ -87,6 +90,7 @@ prepare_suit()
 
 # Lambda Functions (Anonim Fonksiyonlar - Kısa ve Tek Seferlik İşler İçin)
 
+
 # Klasik yöntem:
 def square(x):
     return x * x
@@ -98,6 +102,7 @@ power_up = lambda x: x * x
 print(power_up(5))  # Çıktı: 25
 
 # Example: System Report with Keyword Arguments (Örnek: Anahtar Kelime Argümanları ile Sistem Raporu)
+
 
 def system_report(status, **details):
     print(f"Main Status: {status}")
