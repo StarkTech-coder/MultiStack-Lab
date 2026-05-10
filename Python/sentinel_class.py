@@ -36,6 +36,7 @@ my_jarvis.attack()
 
 # TEST: Başka bir zırh daha üretelim
 
+
 class Weapon:
     def __init__(self, type, ammo):
         # BURADA: Dışarıdan gelen 'type' ve 'ammo' değerlerini
@@ -59,3 +60,35 @@ lazer.fire()
 lazer.fire()
 lazer.fire()
 lazer.fire()  # Burada "Mermi bitti" demeli!
+
+
+# OPSİYONEL PARAMETRELER (Optional Parameters)
+class SentinelArmor:
+    # 'name' ve 'power' ZORUNLU (Required)
+    # 'color' ve 'is_stealth' OPSİYONEL (Default/Optional)
+    def __init__(self, name, power, color="Steel Gray", is_stealth=False):
+        self.name = name
+        self.power = power
+        self.color = color
+        self.is_stealth = is_stealth
+
+        print(f"--- {self.name} Zırhı Hazır ---")
+
+    def show_specs(self):
+        status = "Gizli Mod Aktif" if self.is_stealth else "Normal Mod"
+        print(
+            f"Zırh: {self.name} | Güç: {self.power} | Renk: {self.color} | Durum: {status}"
+        )
+
+
+# --- KULLANIM SENARYOLARI ---
+
+# 1. Sadece zorunlu olanları veriyoruz:
+mark1 = SentinelArmor("Mark-1", 100)
+mark1.show_specs()
+# Çıktı: Renk 'Steel Gray' olur, Stealth 'False' olur. (Sen vermediğin için varsayılanı kullandı)
+
+# 2. Hepsini kendi istediğimiz gibi veriyoruz:
+stealth_suit = SentinelArmor("Ghost", 85, "Midnight Blue", True)
+stealth_suit.show_specs()
+# Çıktı: Senin verdiğin değerler (Midnight Blue ve True) geçerli olur.
