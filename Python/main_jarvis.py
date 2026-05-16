@@ -1,6 +1,5 @@
-# Modülü içe aktarıyoruz 
+# Modülü içe aktarıyoruz
 import energy_system
-
 
 print("--- Jarvis Başlatılıyor ---")
 
